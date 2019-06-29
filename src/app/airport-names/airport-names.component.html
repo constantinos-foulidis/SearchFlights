@@ -1,0 +1,14 @@
+<div>
+<mat-form-field>
+<mat-label>Choose Airport</mat-label>
+ <mat-select>
+   <mat-option *ngFor="let airport of AirportNames" [value]="airport.name" (click)="onSelect(airport.name)">
+     {{airport.name}}
+   </mat-option>
+ </mat-select>
+<div class="">
+   <input matInput type="number" placeholder="Min value" [(ngModel)]="min">
+ </div>
+
+</mat-form-field>
+</div>
