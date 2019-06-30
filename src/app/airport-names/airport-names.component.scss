@@ -1,0 +1,25 @@
+$slidercolor: rgb(0,153,230);
+.airport li {
+  cursor: pointer;
+  position: relative;
+  left: 0;
+  background-color: #EEE;
+  margin: .5em;
+  padding: .3em 0;
+  height: 1.6em;
+  border-radius: 4px;
+}
+
+mat-slider {
+  width: 300px;
+}
+
+::ng-deep .mat-accent .mat-slider-thumb {
+    background-color: $slidercolor;
+}
+::ng-deep .mat-accent .mat-slider-thumb-label {
+    background-color: $slidercolor;
+}
+::ng-deep .mat-accent .mat-slider-track-fill {
+    background-color: $slidercolor;
+}

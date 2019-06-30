@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AirportNames } from '../airportName';
+import { AirportNames } from '../airportNames';
 import { AIRPORTNAMES } from '../mock-airport';
 
 
@@ -21,4 +21,15 @@ selectedAirport: AirportNames;
       this.selectedAirport = airportname;
       console.log("im here"+airportname);
     }
+    formatLabel(value: number | null) {
+    if (!value) {
+      return 0;
+    }
+
+    if (value >= 1) {
+      return Math.round(value) + '€';
+    }
+
+    return value;
+  }
 }
