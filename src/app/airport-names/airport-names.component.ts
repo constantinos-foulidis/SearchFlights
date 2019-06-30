@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AirportNames } from '../airportName';
+import { AirportNames } from '../airportNames';
 import { AIRPORTNAMES } from '../mock-airport';
 
 
