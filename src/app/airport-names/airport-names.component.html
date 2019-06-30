@@ -1,6 +1,6 @@
 <div class="container-fluid">
   <div class="row">
-    <div class="col-md-6">
+    <div class="col text-center mb-3">
       <mat-form-field>
         <mat-label>Choose Airport</mat-label>
         <mat-select>
@@ -10,13 +10,31 @@
         </mat-select>
       </mat-form-field>
     </div>
-      </div>
-    <div class="row">
-      <div class="col-md-6>">
-        <mat-form-field>
-        <input matInput type="number" placeholder="Min value" [(ngModel)]="min">
-        </mat-form-field>
-      </div>
+  </div>
+  <div class="row">
+    <div class="col text-center">
+      <mat-form-field>
+        <input matInput type="number" placeholder="Nights to stay from" [(ngModel)]="min">
+      </mat-form-field>
     </div>
+  </div>
+  <div class="row">
+    <div class="col text-center mb-3">
+      <mat-form-field>
+       <input matInput type="number" placeholder="Nights to stay to" [(ngModel)]="max">
+      </mat-form-field>
 
+    </div>
+  </div>
+  <div class="row">
+    <div class="col text-center">
+  <mat-slider
+  thumbLabel
+  [displayWith]="formatLabel"
+  tickInterval="1"
+  step="1"
+  min="1"
+  max="1000"></mat-slider>
+  </div>
+  </div>
 </div>

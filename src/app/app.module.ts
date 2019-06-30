@@ -10,6 +10,7 @@ import { AirportNamesComponent } from './airport-names/airport-names.component';
 import {MatSliderModule} from '@angular/material/slider';
 import { FormsModule } from '@angular/forms';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import 'hammerjs';
 
 @NgModule({
   declarations: [
