@@ -1,3 +1,4 @@
+$slidercolor: rgb(0,153,230);
 .airport li {
   cursor: pointer;
   position: relative;
@@ -11,4 +12,14 @@
 
 mat-slider {
   width: 300px;
+}
+
+::ng-deep .mat-accent .mat-slider-thumb {
+    background-color: $slidercolor;
+}
+::ng-deep .mat-accent .mat-slider-thumb-label {
+    background-color: $slidercolor;
+}
+::ng-deep .mat-accent .mat-slider-track-fill {
+    background-color: $slidercolor;
 }

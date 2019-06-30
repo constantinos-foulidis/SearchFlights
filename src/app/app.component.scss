@@ -1,4 +1,12 @@
+
 img {
   width:500px;
   height: 500px;
+  transition: all 0.3s ease-in-out 1s,8s;
+}
+img:hover
+{
+    cursor: default;
+    transform: rotate(360deg);
+    transition: all 8s ease-in-out 1s,8s;
 }
