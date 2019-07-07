@@ -24,6 +24,7 @@ export class FlightsService {
     }
     public setNightsTo(value: String) {
          this._nightsindestinationto = value;
+         console.log("im on service"+value);
      }
   constructor(private http:HttpClient) { }
 }

@@ -4,6 +4,8 @@ import { AIRPORTNAMES } from '../mock-airport';
 import { FlightsService } from '../flights.service';
 
 
+
+
 @Component({
   selector: 'app-airport-names',
   templateUrl: './airport-names.component.html',
@@ -28,7 +30,7 @@ export class AirportNamesComponent implements OnInit {
       return 0;
     }
 
-    if (value >= 1000) {
+    if (value >= 1) {
       return Math.round(value) + '€';
     }
 
@@ -38,4 +40,11 @@ export class AirportNamesComponent implements OnInit {
   changeValue(event) {
   this.flightService.setEuro(event.value);
 }
+getNightsStayTo(event){
+  this.flightService.setNightsTo(event.target.value);
+}
+getNightsStayFrom(event){
+  this.flightService.setNightsTo(event.target.value);
+}
+
 }
