@@ -10,7 +10,7 @@ import { Observable } from 'rxjs';
 export class FlightsService {
 
    private _name:String;
-   private _euro: Number;
+   private _euro: String;
    private _nightsindestinationfrom: String;
    private _nightsindestinationto: String;
 
@@ -19,7 +19,7 @@ export class FlightsService {
         console.log("im on service"+value);
     }
   public setEuro(value: Number) {
-       this._euro = value;
+       this._euro = value.toString();
        console.log("im on service"+this._euro.toString());
    }
    public setNightsFrom(value: String) {
@@ -31,9 +31,11 @@ export class FlightsService {
          console.log("im on service"+value);
      }
   constructor(private http:HttpClient) { }
+
   private  url:string='https://api.skypicker.com/flights?fly_from='+this._name+'&price_from=1&price_to='+this._euro+'&sort=price&nights_in_dst_from='+this._nightsindestinationfrom+'&nights_in_dst_to='+this._nightsindestinationto+'&flight_type=round';
- public getFlights():Observable<Searchflights[]>{
-   return this.http.get<Searchflights[]>(this.url) ;
+private url1:string='https://api.skypicker.com/flights?fly_from=SKG&price_from=1&price_to=100&sort=price&nights_in_dst_from=2&nights_in_dst_to=4&flight_type=round';
+  public getFlights():Observable<Searchflights[]>{
+   return this.http.get<Searchflights[]>(this.url1) ;
 
  }
 }

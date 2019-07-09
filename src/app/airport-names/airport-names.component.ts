@@ -15,6 +15,7 @@ export class AirportNamesComponent implements OnInit {
 
       AirportNames = AIRPORTNAMES;
       selectedAirport: AirportNames;
+
   constructor(private flightService: FlightsService) { }
 
   ngOnInit() {
