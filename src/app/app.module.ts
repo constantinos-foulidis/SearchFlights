@@ -13,11 +13,13 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { FlightsService } from './flights.service';
 import { HttpClientModule } from '@angular/common/http';
 import 'hammerjs';
+import { FlightsResaultsComponent } from './flights-resaults/flights-resaults.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AirportNamesComponent
+    AirportNamesComponent,
+    FlightsResaultsComponent
   ],
   imports: [
     BrowserModule,
