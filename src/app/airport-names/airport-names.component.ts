@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { AirportNames } from '../airportNames';
 import { AIRPORTNAMES } from '../mock-airport';
+import { FlightsService } from '../flights.service';
+
+
 
 
 @Component({
@@ -11,14 +14,15 @@ import { AIRPORTNAMES } from '../mock-airport';
 export class AirportNamesComponent implements OnInit {
 
       AirportNames = AIRPORTNAMES;
-selectedAirport: AirportNames;
-  constructor() { }
+      selectedAirport: AirportNames;
+  constructor(private flightService: FlightsService) { }
 
   ngOnInit() {
 
   }
   onSelect(airportname: AirportNames): void {
       this.selectedAirport = airportname;
+      this.flightService.setName(airportname.toString());
       console.log("im here"+airportname);
     }
     formatLabel(value: number | null) {
@@ -31,5 +35,16 @@ selectedAirport: AirportNames;
     }
 
     return value;
+
   }
+  changeValue(event) {
+  this.flightService.setEuro(event.value);
+}
+getNightsStayTo(event){
+  this.flightService.setNightsTo(event.target.value);
+}
+getNightsStayFrom(event){
+  this.flightService.setNightsTo(event.target.value);
+}
+
 }

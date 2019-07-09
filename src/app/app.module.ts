@@ -10,6 +10,8 @@ import { AirportNamesComponent } from './airport-names/airport-names.component';
 import {MatSliderModule} from '@angular/material/slider';
 import { FormsModule } from '@angular/forms';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { FlightsService } from './flights.service';
+import { HttpClientModule } from '@angular/common/http';
 import 'hammerjs';
 
 @NgModule({
@@ -28,7 +30,8 @@ import 'hammerjs';
     MatSelectModule,
     MatSliderModule,
     FormsModule,
-    NgbModule
+    NgbModule,
+     HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
